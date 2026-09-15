@@ -2,6 +2,10 @@
 
 O **Concurso de Poesia: Meias Perdidas** é um site interativo desenvolvido para apresentar uma iniciativa poética inspirada nos pequenos mistérios do cotidiano — como o sumiço de meias na lavanderia. O projeto conta com um carrossel dinâmico em destaque, navegação por botões/indicadores e cards estilizados com foco em autores renomados da literatura brasileira e informações do evento.
 
+Print do Projeto 
+
+<img width="1630" height="904" alt="image" src="https://github.com/user-attachments/assets/d19ef3ee-e876-4e84-80cd-a16557e14f44" />
+
 ---
 
 ## 🛠️ Tecnologias Utilizadas
@@ -27,4 +31,5 @@ Não é necessária a instalação de dependências externas ou servidores compl
 
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/seu-usuario/concurso-meias-perdidas.git](https://github.com/seu-usuario/concurso-meias-perdidas.git)
+[   git clone [https://github.com/seu-usuario/concurso-meias-perdidas.git](https://github.com/seu-usuario/concurso-meias-perdidas.git)
+](https://github.com/yuricoene/concursoPoesia.git)
