@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Cadastro de Poema</title>
+</head>
+<body>
+    <section>
+        <form action="">
+            <header>
+                <h1 id="cabecalho">Concurso de Poesia: Meias Perdidas</h1>
+            </header>
+
+            <!-- Nome e Contato -->
+            <section id="dados">
+                <section class="grupo-campo">
+                    <label for="name" class="rotulo">Nome do Poeta</label>
+                    <section class="campo">
+                        <input type="text" 
+                               id="name" 
+                               name="name" 
+                               placeholder="nome" 
+                               required> 
+                        <i class="fa-regular fa-user"></i>
+                    </section>
+                </section>
+
+                <section class="grupo-campo">
+                    <label for="email" class="rotulo">E-mail</label>
+                    <section class="campo">
+                        <input type="email" 
+                               id="email" 
+                               name="email" 
+                               placeholder="email">
+                        <i class="fa-regular fa-envelope"></i>
+                    </section>
+                </section>
+            </section>
+
+            <!-- Descrever o Poema -->
+             <h5 class="subtitulos">Mensagem</h5>
+            <textarea name="Poema" id="poema" placeholder="Descreva seu poema"></textarea>
+
+            <section class="subtitulos">
+                <h5>Categoria</h5>
+            </section>
+          
+            <section id="espacamento-nome-email">
+                <input type="radio" id="livre" name="opcao" value="livre">
+                <label for="livre">Livre</label>
+                
+                <input type="radio" id="infantil" name="opcao" value="infantil">
+                <label for="infantil">Infantil</label>
+            </section>
+
+            <button type="submit">Enviar</button>    
+        </form>
+    </section>
+   
+   <aside class="chuva-de-meias" aria-hidden="true">
+  <ul>
+    <li>🧦</li>
+    <li>🧦</li>
+    <li>🧦</li>
+    <li>🧦</li>
+    <li>🧦</li>
+    <li>🧦</li>
+    <li>🧦</li>
+    <li>🧦</li>
+  </ul>
+</aside>
+</body>
+</html>

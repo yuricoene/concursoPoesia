@@ -1,0 +1,221 @@
+:root {
+  --cor-texto: #2b0914;
+  
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #faf6f7 0%, #f3e6ea 100%);
+  font-family: 'Poppins', sans-serif; /* Aplica a fonte em todo o formulário */
+}
+
+form {
+  min-height: 480px;
+  width: 600px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(43, 9, 20, 0.1);
+  padding: 20px 0;
+  z-index: 999;
+}
+
+header {
+  width: 85%;
+  padding-bottom: 15px;
+  font-size: 11px;
+}
+
+#cabecalho {
+  text-align: left;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+/* Traço decorativo abaixo do título principal */
+#cabecalho::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #970747;
+  border-radius: 2px;
+}
+
+/* Estrutura que segura Nome e E-mail lado a lado */
+#dados {
+  display: flex;
+  gap: 15px;
+  width: 85%;
+  margin-bottom: 10px;
+}
+
+/* Garante que o Nome e o E-mail tenham EXATAMENTE a mesma largura */
+.grupo-campo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Rótulos acima de cada caixa (Nome do Poeta e E-mail) */
+.rotulo {
+  font-size: 13px;
+  color: var(--cor-texto);
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+/* Moldura retangular onde fica o texto e o ícone */
+.campo {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(151, 7, 71, 0.3);
+  border-radius: 3px;
+  padding: 0 10px;
+  height: 38px;
+  background-color: #ffffff;
+}
+
+/* Preenche todo o espaço interno da caixa */
+.campo input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: var(--cor-texto);
+  background: transparent;
+}
+
+.campo i {
+  color: #970747;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+/* Subtítulos 'Mensagem' e 'Categoria' */
+.subtitulos {
+  width: 85%;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.subtitulos h5, h5.subtitulos {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--cor-texto);
+}
+
+textarea {
+  padding: 10px;
+  height: 160px;
+  width: 85%;
+  border: 1px solid rgba(151, 7, 71, 0.3);
+  background-color: #ffffff;
+  color: var(--cor-texto);
+  border-radius: 3px;
+  resize: none;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+#espacamento-nome-email {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  padding-top: 2px;
+  padding-bottom: 15px;
+}
+
+#espacamento-nome-email input[type="radio"] {
+  margin-right: 5px;
+  cursor: pointer;
+  accent-color: #970747;
+}
+
+#espacamento-nome-email label {
+  margin-right: 20px;
+  font-size: 14px;
+  color: var(--cor-texto);
+  cursor: pointer;
+}
+
+button {
+  font-size: 14px;
+  height: 34px;
+  width: 85%;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #2b0914, #970747);
+  color: #faf6f7;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(0.98);
+}
+
+.chuva-de-meias {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.chuva-de-meias ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chuva-de-meias li {
+  position: absolute;
+  top: -50px;
+  animation: cair linear infinite;
+}
+
+@keyframes cair {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Variação de posição, tamanho e velocidade */
+.chuva-de-meias li:nth-child(1) { left: 8%;  animation-duration: 3.5s; animation-delay: 0s;   font-size: 24px; }
+.chuva-de-meias li:nth-child(2) { left: 22%; animation-duration: 5.2s; animation-delay: 1.5s; font-size: 32px; }
+.chuva-de-meias li:nth-child(3) { left: 35%; animation-duration: 4.0s; animation-delay: 0.5s; font-size: 20px; }
+.chuva-de-meias li:nth-child(4) { left: 48%; animation-duration: 6.0s; animation-delay: 2.2s; font-size: 36px; }
+.chuva-de-meias li:nth-child(5) { left: 63%; animation-duration: 3.8s; animation-delay: 0.8s; font-size: 28px; }
+.chuva-de-meias li:nth-child(6) { left: 76%; animation-duration: 4.8s; animation-delay: 1.8s; font-size: 22px; }
+.chuva-de-meias li:nth-child(7) { left: 89%; animation-duration: 5.5s; animation-delay: 0.3s; font-size: 34px; }
+.chuva-de-meias li:nth-child(8) { left: 15%; animation-duration: 4.2s; animation-delay: 2.8s; font-size: 26px; }
