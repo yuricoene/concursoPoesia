@@ -31,5 +31,4 @@ Não é necessária a instalação de dependências externas ou servidores compl
 
 1. **Clone o repositório:**
    ```bash
-[   git clone [https://github.com/seu-usuario/concurso-meias-perdidas.git](https://github.com/seu-usuario/concurso-meias-perdidas.git)
-](https://github.com/yuricoene/concursoPoesia.git)
+[git clone [https://github.com/seu-usuario/concurso-meias-perdidas.git](https://github.com/seu-usuario/concurso-meias-perdidas.git)](https://github.com/yuricoene/concursoPoesia.git)
