@@ -1,4 +1,3 @@
-/* RESET E ESTILOS GERAIS */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +13,6 @@ body {
     overflow: hidden;
 }
 
-/* HEADER & NAVEGAÇÃO */
 header {
     position: fixed;
     width: 90vw;
@@ -25,7 +23,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 3;
+    z-index: 10;
 }
 
 .logo {
@@ -67,7 +65,6 @@ header nav ul li:hover::after {
     width: 100%;
 }
 
-/* CONTAINER PRINCIPAL & PLANO DE FUNDO */
 .container {
     height: 100vh;
     position: relative;
@@ -101,7 +98,6 @@ header nav ul li:hover::after {
     }
 }
 
-/* ESTRUTURA DO CARROSSEL */
 .lista {
     width: 85%;
     height: 100%;
@@ -109,43 +105,63 @@ header nav ul li:hover::after {
     position: relative;
 }
 
+/* SLIDE INATIVO */
 .item {
     position: absolute;
     inset: 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center; /* Centraliza a imagem e o texto juntos */
     align-items: center;
+    gap: 40px;               /* Distância aproximada entre a imagem e o texto */
     padding-top: 90px;
     opacity: 0;
     transform: translateX(100vw);
     transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .item.active,
 .item.ativo {
     opacity: 1;
     transform: translateX(0);
+    pointer-events: auto;
+    z-index: 2;
 }
 
-/* LADO ESQUERDO: IMAGEM */
+/* container da imagem */
 .produto-img {
     width: 45%;
+    max-width: 480px;
+    height: 360px; 
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 2;
+    background: #f3e6ea;
+    border-radius: 20px;
+    border: 2px solid rgba(151, 7, 71, 0.15);
+    box-shadow: 0 10px 30px rgba(43, 9, 20, 0.12);
+    overflow: hidden;
 }
 
+/* padronizar foto dos poetas*/
 .produto-img img {
-    max-width: 100%;
-    max-height: 55vh;
-    object-fit: contain;
-    filter: drop-shadow(0 0 30px rgba(43, 9, 20, 0.15));
-    transform: translateX(200px);
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Exibe a imagem completa sem nenhum corte */
+    padding: 15px;       /* Cria uma margem interna para a capa respirar no card */
+    transform: translateX(100px);
     opacity: 0;
     transition: transform 0.6s ease, opacity 0.6s ease;
     transition-delay: 0.3s;
+}
+
+/* TRATAMENTO PARA VETORES SVG (NÃO CORTAR) */
+.produto-img img[src$=".svg"] {
+    object-fit: contain;
+    padding: 25px;
 }
 
 .item.active .produto-img img,
@@ -154,9 +170,9 @@ header nav ul li:hover::after {
     opacity: 1;
 }
 
-/* LADO DIREITO: CONTEÚDO */
+/* CONTEÚDO (TEXTO DO LADO DIREITO) */
 .conteudo {
-    width: 50%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -188,7 +204,12 @@ header nav ul li:hover::after {
     margin-bottom: 15px;
 }
 
+/* BOTÃO DE AÇÃO */
 .btn {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    text-decoration: none;
     background: linear-gradient(90deg, #2b0914, #970747);
     color: #faf6f7;
     border: none;
@@ -198,6 +219,7 @@ header nav ul li:hover::after {
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
+    pointer-events: auto;
 }
 
 .btn:hover {
@@ -205,7 +227,7 @@ header nav ul li:hover::after {
     transform: translateY(-2px);
 }
 
-/* NAVEGAÇÃO DE SETAS */
+/* NAVEGAÇÃO DAS SETAS */
 .setas {
     position: absolute;
     width: 95%;
@@ -291,7 +313,7 @@ header nav ul li:hover::after {
     width: 40px;
 }
 
-/* CÍRCULOS DECORATIVOS */
+/* CÍRCULOS DECORATIVOS DE FUNDO */
 .tecnologia-circulo {
     position: absolute;
     top: 0;
@@ -336,50 +358,3 @@ header nav ul li:hover::after {
     top: 20%;
     left: 70%;
 }
-
-/* ANIMAÇÃO DAS MEIAS CADENTES (OPCIONAL) */
-.chuva-de-meias {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: 9999;
-    overflow: hidden;
-}
-
-.chuva-de-meias ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.chuva-de-meias li {
-    position: absolute;
-    top: -50px;
-    animation: cair linear infinite;
-}
-
-@keyframes cair {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(105vh) rotate(360deg);
-        opacity: 0;
-    }
-}
-
-.chuva-de-meias li:nth-child(1) { left: 8%;  animation-duration: 3.5s; animation-delay: 0s;   font-size: 24px; }
-.chuva-de-meias li:nth-child(2) { left: 22%; animation-duration: 5.2s; animation-delay: 1.5s; font-size: 32px; }
-.chuva-de-meias li:nth-child(3) { left: 35%; animation-duration: 4.0s; animation-delay: 0.5s; font-size: 20px; }
-.chuva-de-meias li:nth-child(4) { left: 48%; animation-duration: 6.0s; animation-delay: 2.2s; font-size: 36px; }
-.chuva-de-meias li:nth-child(5) { left: 63%; animation-duration: 3.8s; animation-delay: 0.8s; font-size: 28px; }
-.chuva-de-meias li:nth-child(6) { left: 76%; animation-duration: 4.8s; animation-delay: 1.8s; font-size: 22px; }
-.chuva-de-meias li:nth-child(7) { left: 89%; animation-duration: 5.5s; animation-delay: 0.3s; font-size: 34px; }
-.chuva-de-meias li:nth-child(8) { left: 15%; animation-duration: 4.2s; animation-delay: 2.8s; font-size: 26px; }
