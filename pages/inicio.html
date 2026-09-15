@@ -15,8 +15,8 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Contatos</a></li>
+                <li><a href="#">Concurso</a></li>
+                <li><a href="#">Poesias</a></li>
             </ul>
         </nav>
     </header>
@@ -30,18 +30,46 @@
         </div>
 
         <section class="lista">
+            <!-- 1º ITEM: EXPLICAÇÃO DO CONCEITO (INICIA ATIVO) -->
             <article class="item ativo">
+                <figure class="produto-img">
+                    <img src="../assets/images/ideia.webp" alt="Ilustração do Conceito do Concurso">
+                </figure>
+                <div class="conteudo">
+                    <h2 class="produto-tag">Conceito & Inspiração</h2>
+                    <h3 class="nome-poeta">O Mistério das Meias Perdidas</h3>
+                    <p class="descricao">Inspirado no olhar poético de Clarice Lispector sobre o cotidiano, nosso concurso transforma o sumiço diário de meias em arte. Uma oportunidade de dar voz ao invisível através da poesia.</p>
+                    <button type="button" class="btn" onclick="alert('Leia o regulamento no formulário abaixo!')">Como Participar</button>
+                </div>
+            </article>
+
+            <!-- 2º ITEM: DADOS E POEMAS SUBMETIDOS (FORMULÁRIO / UA) -->
+            <article class="item">
+                <figure class="produto-img">
+                    <img src="../assets/images/dados.webp" alt="Gráficos de submissões e inscrições">
+                </figure>
+                <div class="conteudo">
+                    <h2 class="produto-tag">Métricas & Submissões (UA)</h2>
+                    <h3 class="nome-poeta">Mural de Poetas & Dados</h3>
+                    <p class="descricao">Acompanhe em tempo real os dados de conversão de inscrições e os poemas submetidos. Analise o engajamento dos poetas e a taxa de participação do concurso.</p>
+                    <button type="button" class="btn" onclick="alert('Carregando métricas de formulário...')">Ver Dados de Inscritos</button>
+                </div>
+            </article>
+
+            <!-- 3º ITEM: LIVRO 1 (CLARICE LISPECTOR) -->
+            <article class="item">
                 <figure class="produto-img">
                     <img src="../assets/images/clarice.webp" alt="Clarice Lispector">
                 </figure>
                 <div class="conteudo">
                     <h2 class="produto-tag">Clarice Lispector</h2>
                     <h3 class="nome-poeta">Uma Aprendizagem ou O Livro dos Prazeres</h3>
-                    <p class="descricao">Uma jornada poética sobre aprender a sentir, olhar para dentro e encontrar beleza nas pequenas descobertas cotidianas</p>
+                    <p class="descricao">Uma jornada poética sobre aprender a sentir, olhar para dentro e encontrar beleza nas pequenas descobertas cotidianas.</p>
                     <button type="button" class="btn" onclick="window.open('https://www.amazon.com.br/Uma-aprendizagem-livro-dos-prazeres/dp/6555320176')">Saiba Mais</button>
                 </div>
             </article>
 
+            <!-- 4º ITEM: LIVRO 2 (CARLOS DRUMMOND DE ANDRADE) -->
             <article class="item">
                 <figure class="produto-img">
                     <img src="../assets/images/carlos.webp" alt="Carlos Drummond de Andrade">
@@ -50,10 +78,11 @@
                     <h2 class="produto-tag">Carlos Drummond de Andrade</h2>
                     <h3 class="nome-poeta">Alguma Poesia</h3>
                     <p class="descricao">A prova de que qualquer assunto banal da vida pode se tornar um grande poema.</p>
-                    <button type="button" class="btn" onclick="window.open('https://www.amazon.com.br/Alguma-poesia-Carlos-Drummond-Andrade/dp/6555874619/ref=sr_1_1?__mk_pt_BR=ÅMÅŽÕÑ&crid=1KN5HFZHIGY0N&dib=eyJ2IjoiMSJ9.stok_2EmWbok3unkJ41zExoCNDX0is0LcYPWHk7qM6Jvj_XgAayz7R0by6BbNUrzEq_N9Gsy2BxI5FB2b15SUGn_z-gHGllUw_TkyNGC6lJSUPw3gEWZsA_rrJ5aj9DYHIc9LvMNP_TZLo4V1DxRxbE5rasyOqT4hS4SbULtzrk9zLleWF0njgt9xJjNPM0wLzJJPg_SlmLbcOkUtAevVh37vikh1s9WHaZTnWR3m4o.mD940I8dnyxbsT652Y7G8nGcENEtDswLGlglYKOUsaU&dib_tag=se&keywords=Alguma+Poesia&qid=1789473942&s=books&sprefix=alguma+poesia%2Cstripbooks%2C211&sr=1-1')">Saiba Mais</button>
+                    <button type="button" class="btn" onclick="window.open('https://www.amazon.com.br/Alguma-poesia-Carlos-Drummond-Andrade/dp/6555874619')">Saiba Mais</button>
                 </div>
             </article>
 
+            <!-- 5º ITEM: LIVRO 3 (CECÍLIA MEIRELES) -->
             <article class="item">
                 <figure class="produto-img">
                     <img src="../assets/images/cecilia.webp" alt="Cecília Meireles">
@@ -62,8 +91,7 @@
                     <h2 class="produto-tag">Cecília Meireles</h2>
                     <h3 class="nome-poeta">Ou Isto ou Aquilo</h3>
                     <p class="descricao">Um convite para explorar a sonoridade e a liberdade das palavras na hora de escrever.</p>
-                    <button type="button" class="btn" onclick="window.open('https://www.amazon.com.br/Ou-Isto-Aquilo-Cecília-Meireles/dp/852602129X')">Saiba Mais
-                    </button>
+                    <button type="button" class="btn" onclick="window.open('https://www.amazon.com.br/Ou-Isto-Aquilo-Cecília-Meireles/dp/852602129X')">Saiba Mais</button>
                 </div>
             </article>
         </section>
@@ -84,13 +112,16 @@
 
         <div class="indicadores">
             <div class="numeros">01</div>
-            <div class="dots"></div>
-            <div class="dot "></div>
-            <div class="dot"></div>
-            <div class="dot active"></div>
-
+            <div class="dots">
+                <div class="dot ativo"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
         </div>
     </main>
+
+    <script src="../script/scripts.js"></script>
 </body>
-<script src="../script/scripts.js"></script>
 </html>
