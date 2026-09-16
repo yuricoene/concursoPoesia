@@ -1,4 +1,4 @@
-# Concurso de Poesia: Meias Perdidas 🧦
+# Concurso de Poesia: Meias Perdidas 
 
 O **Concurso de Poesia: Meias Perdidas** é um site interativo desenvolvido para apresentar uma iniciativa poética inspirada nos pequenos mistérios do cotidiano — como o sumiço de meias na lavanderia. O projeto conta com um carrossel dinâmico em destaque, navegação por botões/indicadores e cards estilizados com foco em autores renomados da literatura brasileira e informações do evento.
 
